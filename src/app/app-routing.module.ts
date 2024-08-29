@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'botones',
+    loadChildren: () => import('./pages/botones/botones.module').then( m => m.BotonesPageModule)
+  },
+  {
+    path: 'alertas',
+    loadChildren: () => import('./pages/alertas/alertas.module').then( m => m.AlertasPageModule)
+  },
 
 ];
 
