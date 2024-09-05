@@ -6,4 +6,18 @@
   <ion-text color="primary" class="ion-text-center">
     <h1>Botones</h1>
   </ion-text>
+
+  <ion-button (click)="onClick()" expand="block" fill="solid" size="large">
+    Click me
+  </ion-button>
+
+  <ion-text color="tertiary" class="ion-text-center">
+    <h1>{{saludo}}</h1>
+  </ion-text>
+
+  <ion-button (click)="navegar()" expand="block" >
+  
+    <ion-icon slot="start" name="home-outline"></ion-icon>
+    Volver al home
+  </ion-button>
 </ion-content>
