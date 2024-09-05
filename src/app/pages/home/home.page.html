@@ -12,17 +12,11 @@
   <ion-list-header color="primary">
     <ion-label>Menu</ion-label>
   </ion-list-header>
-  <ion-item detail="true" routerLink="/botones">
-    <ion-icon name="radio-button-on-outline" slot="start"></ion-icon>
-    <ion-label>Botones</ion-label>
+
+  <ion-item detail="true" routerLink="{{item.ruta}}" *ngFor="let item of listaItems" >
+    <ion-icon name="{{item.icono}}" slot="start"></ion-icon>
+    <ion-label class="ion-text-capitalize">{{item.etiqueta}}</ion-label>
   </ion-item>
-  <ion-item detail="true" routerLink="/alertas">
-    <ion-icon name="warning-outline" slot="start" ></ion-icon>
-    <ion-label>Alertas</ion-label>
-  </ion-item>
-  <ion-item detail="true" routerLink="/formulario">
-    <ion-icon name="reader-outline" slot="start"></ion-icon>
-    <ion-label>Formularios</ion-label>
-  </ion-item>
+
  </ion-list>
 </ion-content>
