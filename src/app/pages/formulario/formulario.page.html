@@ -3,5 +3,24 @@
 
   <ion-text color="primary" class="ion-text-center">
     <h1>Formulario</h1>
+    <ion-list>
+      <form #miForm="ngForm" (ngSubmit)="enviar()">
+        <ion-item>
+          <ion-input type="text" required label="Nombre de Usuario" labelPlacement="floating" placeholder="usuario" name='usuario' [(ngModel)]="usr.username" ></ion-input>
+          
+        </ion-item>
+        <ion-item>
+          <ion-input type="password" required label="Contraseña" labelPlacement="floating" placeholder="*******" name="pass" [(ngModel)]="usr.password"></ion-input>
+        </ion-item>
+        <ion-button type="submit" expand="block" fill="solid" color="tertiary" [disabled]="miForm.invalid">
+          Iniciar Sesión
+        </ion-button>
+
+        <ion-text color="primary">
+          <h4>{{mensaje}}</h4>
+        </ion-text>
+
+      </form>
+    </ion-list>
   </ion-text>
 </ion-content>
